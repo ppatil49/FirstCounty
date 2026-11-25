@@ -148,7 +148,7 @@ def finding_card(f, editable_marketing: bool, editable_compliance: bool):
         if fb:
             st.caption(f"Compliance marked this finding **{fb.verdict}**" + (f": {fb.note}" if fb.note else ""))
         if editable_compliance:
-            c1, c2, c3 = st.columns([1, 1, 3])
+            c1, c2, c3 = st.columns([1, 1.4, 2.6])
             note = c3.text_input("Note", key=f"note{f.id}", label_visibility="collapsed", placeholder="Optional note")
             if c1.button("✔ AI correct", key=f"ok{f.id}"):
                 run(lambda: svc.give_feedback(user, f.id, "correct", note), "Feedback saved")

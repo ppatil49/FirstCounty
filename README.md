@@ -7,6 +7,11 @@ with an append-only, tamper-evident audit trail.
 
 All data is synthetic. Built for the FCB Senior AI Application Engineer take-home.
 
+📘 **[User Manual](docs/user_manual.md)** (how to use it, with screenshots) ·
+🛠 **[Run Instructions](docs/run_instructions.md)** (install, configure, test, troubleshoot) ·
+📐 [Design Note](docs/design_note.md) · ✅ [Before Production](docs/before_production.md) ·
+📊 [Evaluation Report](eval/results/eval_report.md)
+
 ## Quick start (under 10 minutes)
 
 Requires Python 3.11+ (tested on 3.15).
