@@ -98,6 +98,21 @@ docs/                    design note and before-production list
 | `python eval/run_eval.py` | Live precision/recall on AD-01..04 + raw findings for all 12 ads | Yes |
 | `python eval/run_eval.py --runs 3` | Same, plus which findings change between runs | Yes |
 | `python eval/run_eval.py --replay` | Re-scores saved responses through current code | No |
+| `pytest -m ui` | 11 Playwright browser tests of the full workflow (see below) | No |
+
+### Browser tests (Playwright)
+
+```bash
+pip install -r requirements-dev.txt
+python -m playwright install chromium
+pytest -m ui                       # ~3 min; each test starts its own app with an empty database
+pytest -m ui --headed --slowmo 300 # watch it click through
+```
+
+They cover: app load and role switcher; submitting a sample ad and seeing findings; a clean ad going straight
+to Compliance; dispute needs a reason; an accepted high finding still blocks sending; disputing unlocks sending;
+role separation in the UI; Compliance feedback on findings; Return/Reject need a comment; reject with comment;
+and the full journey (return → resubmit → diff → approve → audit trail).
 
 Results: [`eval/results/eval_report.md`](eval/results/eval_report.md) and
 [`eval/results/findings_all_12.json`](eval/results/findings_all_12.json).

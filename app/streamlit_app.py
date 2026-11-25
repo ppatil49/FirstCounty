@@ -132,7 +132,8 @@ def finding_card(f, editable_marketing: bool, editable_compliance: bool):
             st.caption("Validation: " + "; ".join(f.validation_notes))
         r = f.latest_response
         if r:
-            st.markdown(f"**Marketing {r.action}ed**" + (f" — “{r.reason}”" if r.reason else "") + f" ({r.actor})")
+            verb = {"accept": "accepted", "dispute": "disputed"}[r.action]
+            st.markdown(f"**Marketing {verb}**" + (f" — “{r.reason}”" if r.reason else "") + f" ({r.actor})")
         if editable_marketing:
             c1, c2, c3 = st.columns([1, 3, 1])
             if c1.button("Accept", key=f"acc{f.id}"):

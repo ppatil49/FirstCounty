@@ -7,4 +7,5 @@ requires-python = ">=3.11"
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-q -m 'not ui'"
+markers = ["ui: browser tests with Playwright (run with: pytest -m ui)"]
