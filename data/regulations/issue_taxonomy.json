@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "issue_codes": [
+    {"code": "REGDD_RATE_NOT_APY", "regulation": "12 CFR 1030.8(b)", "description": "Deposit rate stated without being expressed as an annual percentage yield, or another rate stated more conspicuously than the APY."},
+    {"code": "REGDD_MISSING_APY_TERMS", "regulation": "12 CFR 1030.8(c)", "description": "APY stated but one or more required additional disclosures missing (variable rate, as-of date, minimum balance, minimum opening deposit, fees may reduce earnings, CD term, early withdrawal penalty)."},
+    {"code": "REGDD_FREE_MISUSE", "regulation": "12 CFR 1030.8(a)(2)", "description": "Account described as 'free' or 'no cost' when a maintenance or activity fee may be imposed."},
+    {"code": "REGDD_BONUS_TERMS", "regulation": "12 CFR 1030.8(d)", "description": "Bonus advertised without required terms (time requirement, minimum balance, when the bonus is provided, etc.)."},
+    {"code": "REGZ_RATE_WITHOUT_APR", "regulation": "12 CFR 1026.24(c), 1026.24(f)", "description": "Credit rate stated without the APR, or the APR is less prominent than another rate."},
+    {"code": "REGZ_TRIGGER_TERMS", "regulation": "12 CFR 1026.24(d) / 1026.16(b),(d)", "description": "Triggering term used (payment amount, repayment period, down payment, finance charge) without the required additional disclosures."},
+    {"code": "REGZ_INTRO_RATE", "regulation": "12 CFR 1026.16(d)(6), 1026.16(g)", "description": "Promotional/introductory rate not labeled 'introductory'/'intro', or missing its duration or the APR that applies afterward."},
+    {"code": "FDIC_MISSING_STATEMENT", "regulation": "12 CFR Part 328, Subpart A", "description": "Deposit product ad missing the official advertising statement ('Member FDIC')."},
+    {"code": "FDIC_NONDEPOSIT_MISREP", "regulation": "12 CFR Part 328, Subpart B", "description": "Non-deposit product presented in a way that represents or implies FDIC insurance, including misuse of the FDIC name or logo."},
+    {"code": "NONDEPOSIT_DISCLOSURES_MISSING", "regulation": "Interagency Statement on Retail Sales of Nondeposit Investment Products; FINRA Rule 2210", "description": "Investment/annuity ad missing 'Not FDIC Insured / Not Bank Guaranteed / May Lose Value' disclosures."},
+    {"code": "EHL_MISSING", "regulation": "12 CFR 338.3", "description": "Residential real estate-related loan ad missing the Equal Housing Lender logo or legend."},
+    {"code": "FAIR_LENDING_DISCOURAGEMENT", "regulation": "12 CFR 1002.4(b); 42 U.S.C. 3604(c)", "description": "Wording, imagery or targeting that could discourage applicants on a prohibited basis."},
+    {"code": "UDAAP_MISLEADING", "regulation": "12 U.S.C. 5531, 5536; 15 U.S.C. 45", "description": "Deceptive or unsubstantiated claim, or fine print that contradicts the headline or net impression."},
+    {"code": "FCRA_PRESCREEN_NOTICE", "regulation": "15 U.S.C. 1681m(d); 12 CFR 1022.54", "description": "Prescreened credit offer missing the short-form and/or long-form opt-out notice."},
+    {"code": "CANSPAM_MISSING_ELEMENT", "regulation": "15 U.S.C. 7704", "description": "Commercial email missing an unsubscribe mechanism, a valid physical postal address, or other required element, or uses a deceptive subject line."}
+  ]
+}

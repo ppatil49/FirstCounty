@@ -1,0 +1,5 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.6-flash",
+  "response": "{\n  \"classification\": {\n    \"product_category\": \"deposit\",\n    \"consumer\": true,\n    \"channel_type\": \"web\",\n    \"prescreened_offer\": false,\n    \"applicable_rules\": [\n      \"12 CFR 1030.8 (Regulation DD)\",\n      \"12 CFR Part 328 (FDIC)\",\n      \"12 U.S.C. 5531, 5536 (UDAAP)\"\n    ]\n  },\n  \"findings\": []\n}"
+}

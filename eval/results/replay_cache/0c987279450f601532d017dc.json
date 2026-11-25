@@ -1,0 +1,5 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.6-flash",
+  "response": "{\n  \"classification\": {\n    \"product_category\": \"closed_end_credit\",\n    \"consumer\": true,\n    \"channel_type\": \"email\",\n    \"prescreened_offer\": false,\n    \"applicable_rules\": [\n      \"12 CFR 1026.24\",\n      \"15 U.S.C. 7704\",\n      \"12 U.S.C. 5531\"\n    ]\n  },\n  \"findings\": []\n}"
+}

@@ -1,0 +1,83 @@
+{
+  "scoring_notes": [
+    "A finding matches when ad_id + issue_code match an expected finding.",
+    "If one issue_code covers several missing elements (e.g., several missing APY disclosures), it counts as ONE match. Listing the missing elements in the explanation is expected.",
+    "Codes in 'also_acceptable' are neither rewarded nor penalized.",
+    "Any finding whose code is not in expected_findings or also_acceptable counts as a false positive. 'not_expected' lists common false-positive traps."
+  ],
+  "ads": {
+    "AD-01": {
+      "clean": false,
+      "expected_findings": [
+        {
+          "issue_code": "REGDD_RATE_NOT_APY",
+          "severity": "high",
+          "offending_text": "Earn 4.25%!",
+          "rationale": "Rate of return stated without being expressed as an Annual Percentage Yield."
+        },
+        {
+          "issue_code": "REGDD_MISSING_APY_TERMS",
+          "severity": "high",
+          "offending_text": null,
+          "rationale": "Missing: APY as-of date or offer period ('limited time' is not specific), minimum balance to obtain the APY, statement that fees could reduce earnings, and statement that an early withdrawal penalty may be imposed."
+        },
+        {
+          "issue_code": "FDIC_MISSING_STATEMENT",
+          "severity": "high",
+          "offending_text": null,
+          "rationale": "Deposit product ad with no 'Member FDIC' statement."
+        }
+      ],
+      "also_acceptable": [],
+      "not_expected": [
+        "CANSPAM_MISSING_ELEMENT (postcard, not email)"
+      ]
+    },
+    "AD-02": {
+      "clean": false,
+      "expected_findings": [
+        {
+          "issue_code": "REGDD_FREE_MISUSE",
+          "severity": "high",
+          "offending_text": "Free Checking.",
+          "rationale": "Account called 'free' although a $5 monthly maintenance fee may be imposed."
+        },
+        {
+          "issue_code": "UDAAP_MISLEADING",
+          "severity": "medium",
+          "offending_text": "No strings attached.",
+          "rationale": "Headline contradicted by the fee-waiver condition in the fine print; misleading net impression."
+        }
+      ],
+      "also_acceptable": [],
+      "not_expected": [
+        "FDIC_MISSING_STATEMENT ('Member FDIC' is present)"
+      ]
+    },
+    "AD-03": {
+      "clean": false,
+      "expected_findings": [
+        {
+          "issue_code": "REGZ_TRIGGER_TERMS",
+          "severity": "high",
+          "offending_text": "Payments as low as $299/month",
+          "rationale": "Payment amount is a triggering term; ad must also state the down payment, terms of repayment and APR (and whether it may increase)."
+        }
+      ],
+      "also_acceptable": [],
+      "not_expected": [
+        "FDIC_MISSING_STATEMENT (loan-only ad; official advertising statement not required)",
+        "EHL_MISSING (auto loan is not residential real estate-related)"
+      ]
+    },
+    "AD-04": {
+      "clean": true,
+      "expected_findings": [],
+      "also_acceptable": [],
+      "not_expected": [
+        "REGDD_MISSING_APY_TERMS (all required disclosures present)",
+        "Any other finding"
+      ]
+    }
+  }
+}

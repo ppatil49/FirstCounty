@@ -1,0 +1,5 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.6-flash",
+  "response": "{\n  \"classification\": {\n    \"product_category\": \"deposit\",\n    \"consumer\": true,\n    \"channel_type\": \"print\",\n    \"prescreened_offer\": false,\n    \"applicable_rules\": [\n      \"Reg DD\",\n      \"FDIC Part 328\",\n      \"UDAAP\"\n    ]\n  },\n  \"findings\": [\n    {\n      \"issue_code\": \"REGDD_MISSING_APY_TERMS\",\n      \"regulation\": \"12 CFR 1030.8(c)(6)\",\n      \"offending_text\": null,\n      \"explanation\": \"When advertising an APY for a time account (CD), Regulation DD (12 CFR 1030.8(c)(6)) requires disclosing that a penalty will or may be imposed for early withdrawal.\",\n      \"suggested_fix\": \"Include 'A penalty will or may be imposed for early withdrawal' in the fine print disclosures.\",\n      \"severity\": \"high\",\n      \"confidence\": 0.95\n    }\n  ]\n}"
+}

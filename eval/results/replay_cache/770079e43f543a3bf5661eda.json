@@ -1,0 +1,5 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.6-flash",
+  "response": "{\n  \"classification\": {\n    \"product_category\": \"deposit\",\n    \"consumer\": false,\n    \"channel_type\": \"web\",\n    \"prescreened_offer\": false,\n    \"applicable_rules\": [\n      \"FDIC Subpart A\",\n      \"UDAAP\"\n    ]\n  },\n  \"findings\": []\n}"
+}

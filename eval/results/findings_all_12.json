@@ -1,0 +1,506 @@
+[
+  {
+    "ad_id": "AD-01",
+    "findings": [
+      {
+        "issue_code": "REGDD_RATE_NOT_APY",
+        "regulation": "12 CFR 1030.8(b)",
+        "offending_text": "Earn 4.25%!",
+        "explanation": "Regulation DD mandates that if an advertisement states a rate of return, it must be stated as 'annual percentage yield' (or 'APY' if spelled out at least once).",
+        "suggested_fix": "Change the headline/text to 'Earn 4.25% APY*' or 'Earn 4.25% Annual Percentage Yield (APY)*'.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "REGDD_MISSING_APY_TERMS",
+        "regulation": "12 CFR 1030.8(c)",
+        "offending_text": null,
+        "explanation": "Stating a deposit rate triggers mandatory Regulation DD disclosures: the minimum balance required to obtain the APY, the effective date or period the APY is offered, a statement that fees could reduce earnings, and for CDs, a statement that a penalty will or may be imposed for early withdrawal.",
+        "suggested_fix": "Add a disclosure footnote such as: '*Annual Percentage Yield (APY) accurate as of [Date]. Minimum balance to open and obtain APY is $[Amount]. A penalty may be imposed for early withdrawal. Fees could reduce earnings on the account.'",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "FDIC_MISSING_STATEMENT",
+        "regulation": "12 CFR Part 328, Subpart A",
+        "offending_text": null,
+        "explanation": "Advertisements promoting deposit products (such as Certificates of Deposit) must include the FDIC official advertising statement, typically 'Member FDIC'.",
+        "suggested_fix": "Add 'Member FDIC' adjacent to the bank name or at the bottom of the postcard.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": true,
+      "channel_type": "mailer",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR 1030.8 (Regulation DD)",
+        "12 CFR Part 328 (FDIC Official Advertising Statement)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "c839fb1d2fdd5cace564af5d"
+  },
+  {
+    "ad_id": "AD-02",
+    "findings": [
+      {
+        "issue_code": "REGDD_FREE_MISUSE",
+        "regulation": "12 CFR 1030.8(a)(2)",
+        "offending_text": "Free Checking",
+        "explanation": "Under Regulation DD, an account cannot be advertised as 'free' or 'no cost' if a maintenance or activity fee may be imposed, including accounts where fees are waived only if specific balance or direct deposit requirements are met.",
+        "suggested_fix": "Remove the term 'Free' and rephrase, e.g., 'First County Checking' or 'Checking with fee waiver options'.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "UDAAP_MISLEADING",
+        "regulation": "12 U.S.C. 5531, 5536; 15 U.S.C. 45",
+        "offending_text": "Free Checking. No strings attached.",
+        "explanation": "Claiming 'No strings attached' is deceptive and contradicts the fine print, which requires $500 or more in monthly direct deposits to waive the $5 monthly maintenance fee.",
+        "suggested_fix": "Remove 'No strings attached' and ensure headline claims accurately reflect the conditional fee waiver requirements.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": true,
+      "channel_type": "social",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "Reg DD",
+        "FDIC",
+        "UDAAP"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "7f43b91c7258065018fb83d2"
+  },
+  {
+    "ad_id": "AD-03",
+    "findings": [
+      {
+        "issue_code": "REGZ_TRIGGER_TERMS",
+        "regulation": "12 CFR 1026.24(d) / 1026.16(b),(d)",
+        "offending_text": "Payments as low as $299/month on new auto loans.",
+        "explanation": "Stating a specific monthly payment amount ('$299/month') is a triggering term under Regulation Z. When a payment amount is stated, the advertisement must also disclose the required down payment amount or percentage, the terms of repayment (e.g., length of loan/number of months), and the Annual Percentage Rate (APR), including whether the rate may increase.",
+        "suggested_fix": "Add the required disclosures, for example: 'Payments as low as $299/month based on a 60-month loan at 5.99% APR with 10% down.'",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "closed_end_credit",
+      "consumer": true,
+      "channel_type": "web",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR 1026.24 (Regulation Z - Closed-End Credit Advertising)",
+        "12 U.S.C. 5531/5536 (UDAAP)",
+        "12 CFR 1002.4(b) (Regulation B - Equal Credit Opportunity)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "cbee863473e088dabc4489e5"
+  },
+  {
+    "ad_id": "AD-04",
+    "findings": [],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": true,
+      "channel_type": "web",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR 1030.8 (Regulation DD)",
+        "12 CFR Part 328 (FDIC)",
+        "12 U.S.C. 5531, 5536 (UDAAP)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "3b3e5a609647ea41d53972dd"
+  },
+  {
+    "ad_id": "AD-05",
+    "findings": [
+      {
+        "issue_code": "REGZ_RATE_WITHOUT_APR",
+        "regulation": "12 CFR 1026.24(c), 1026.24(f)",
+        "offending_text": "Rates from 6.125%!",
+        "explanation": "Stating an interest rate without expressing it as an Annual Percentage Rate (APR) violates Regulation Z. Any simple annual interest rate must be accompanied by the APR and cannot be displayed more conspicuously than the APR.",
+        "suggested_fix": "Disclose the Annual Percentage Rate (APR) prominently alongside or in place of the interest rate (e.g., '6.125% Interest Rate / 6.250% APR').",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "REGZ_TRIGGER_TERMS",
+        "regulation": "12 CFR 1026.24(d) / 1026.16(b),(d)",
+        "offending_text": "30-Year Fixed Mortgages",
+        "explanation": "Stating the repayment period ('30-Year') is a triggering term under Regulation Z (12 CFR 1026.24(d)). Using a triggering term requires disclosing the down payment amount or percentage, full terms of repayment, and the APR.",
+        "suggested_fix": "Include required disclosures: down payment amount or percentage, repayment terms (e.g., '360 monthly payments of $X per $100,000 borrowed'), and the APR.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "EHL_MISSING",
+        "regulation": "12 CFR 338.3",
+        "offending_text": null,
+        "explanation": "Advertisements for residential real estate-related loans must include the Equal Housing Lender logo or legend.",
+        "suggested_fix": "Add the Equal Housing Lender logo and text 'Equal Housing Lender' to the flyer.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "UDAAP_MISLEADING",
+        "regulation": "12 U.S.C. 5531, 5536; 15 U.S.C. 45",
+        "offending_text": "The lowest mortgage rates in Connecticut, guaranteed.",
+        "explanation": "Claiming to offer the 'lowest mortgage rates in Connecticut, guaranteed' is an unsubstantiated superlative claim that is deceptive under UDAAP standards unless fully documented and proven.",
+        "suggested_fix": "Remove the claim or modify to substantiable phrasing such as 'Offering competitive mortgage rates in Connecticut.'",
+        "severity": "high",
+        "confidence": 0.9,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "FAIR_LENDING_DISCOURAGEMENT",
+        "regulation": "12 CFR 1002.4(b); 42 U.S.C. 3604(c)",
+        "offending_text": "Perfect for young families buying their first home.",
+        "explanation": "Advertising that targets 'young families' implies preference based on age and familial status, which can discourage potential applicants outside those protected classes under Regulation B and the Fair Housing Act.",
+        "suggested_fix": "Use inclusive language such as 'Perfect for first-time homebuyers.'",
+        "severity": "medium",
+        "confidence": 0.85,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "home_secured_credit",
+      "consumer": true,
+      "channel_type": "print",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR 1026.24 (Regulation Z - Closed-End Credit)",
+        "12 CFR 338.3 (Equal Housing Lender)",
+        "12 U.S.C. 5531, 5536 (UDAAP)",
+        "12 CFR 1002.4(b) (Regulation B / Fair Lending)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "9fa0d1dbecebe77b1729ceb7"
+  },
+  {
+    "ad_id": "AD-06",
+    "findings": [
+      {
+        "issue_code": "REGZ_INTRO_RATE",
+        "regulation": "12 CFR 1026.16(d)(6), 1026.16(g)",
+        "offending_text": "3.99% for the first 12 months!",
+        "explanation": "When advertising a promotional rate for a home equity line of credit, 12 CFR 1026.16(d)(6) requires using the word 'introductory' or 'intro' in immediate proximity to the rate, expressing the rate as an APR, and stating the post-promotional APR that will apply after the 12-month period.",
+        "suggested_fix": "Revise the script to say: 'get an introductory APR of 3.99% for the first 12 months! After that, the variable APR is currently X.XX%.'",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "EHL_MISSING",
+        "regulation": "12 CFR 338.3",
+        "offending_text": null,
+        "explanation": "As a residential real estate-related loan product, HELOC radio advertisements must include the spoken legend 'Equal Housing Lender'.",
+        "suggested_fix": "Add 'Equal Housing Lender' to the spoken sign-off (e.g., 'First County Bank. Member FDIC. Equal Housing Lender.').",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "home_secured_credit",
+      "consumer": true,
+      "channel_type": "radio",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "Reg Z (12 CFR 1026.16)",
+        "Equal Housing Lender (12 CFR 338.3)",
+        "UDAAP"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "d0951ea5b40bd81dd2d468bb"
+  },
+  {
+    "ad_id": "AD-07",
+    "findings": [
+      {
+        "issue_code": "FDIC_NONDEPOSIT_MISREP",
+        "regulation": "12 CFR Part 328, Subpart B",
+        "offending_text": "Backed by First County Bank, Member FDIC.",
+        "explanation": "Annuities are non-deposit investment products and cannot be represented as FDIC-insured or backed by the FDIC. Incorporating 'Member FDIC' and the FDIC logo in an ad for annuities falsely implies FDIC insurance coverage.",
+        "suggested_fix": "Remove the FDIC logo and all references to 'Member FDIC'.",
+        "severity": "high",
+        "confidence": 0.98,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "NONDEPOSIT_DISCLOSURES_MISSING",
+        "regulation": "Interagency Statement on Retail Sales of Nondeposit Investment Products; FINRA Rule 2210",
+        "offending_text": null,
+        "explanation": "Marketing materials for non-deposit investment products (like annuities) must clearly state that products are Not FDIC Insured, Not Bank Guaranteed, and May Lose Value.",
+        "suggested_fix": "Add prominent non-deposit investment product disclosures: 'NOT FDIC INSURED | NOT BANK GUARANTEED | MAY LOSE VALUE | NOT A DEPOSIT'.",
+        "severity": "high",
+        "confidence": 0.98,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "UDAAP_MISLEADING",
+        "regulation": "12 U.S.C. 5531, 5536; 15 U.S.C. 45",
+        "offending_text": "guaranteed growth with no risk to your principal",
+        "explanation": "Promising 'guaranteed growth with no risk to your principal' in combination with bank branding creates a misleading net impression that the product is a risk-free, bank-backed deposit.",
+        "suggested_fix": "Remove promises of risk-free growth and accurately describe annuity terms, explaining that guarantees are subject to the financial strength and claims-paying ability of the issuing insurance company.",
+        "severity": "high",
+        "confidence": 0.9,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "investment",
+      "consumer": true,
+      "channel_type": "print",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR Part 328 Subpart B (FDIC Misrepresentation)",
+        "Interagency Statement on Retail Sales of Nondeposit Investment Products",
+        "UDAAP (12 U.S.C. 5531, 5536)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "217793bfdedd826a0b1fe652"
+  },
+  {
+    "ad_id": "AD-08",
+    "findings": [],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": false,
+      "channel_type": "web",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "FDIC Subpart A",
+        "UDAAP"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "770079e43f543a3bf5661eda"
+  },
+  {
+    "ad_id": "AD-09",
+    "findings": [
+      {
+        "issue_code": "REGDD_BONUS_TERMS",
+        "regulation": "12 CFR 1030.8(d)",
+        "offending_text": "Get $300 when you open a new checking account!",
+        "explanation": "When a bonus is advertised for a deposit account, Regulation DD requires disclosing the minimum balance required to obtain the bonus, time requirements to obtain the bonus, minimum opening deposit, and when the bonus will be provided.",
+        "suggested_fix": "Add fine print or clear disclosures detailing the minimum balance to earn the bonus, time requirements (e.g., maintain balance for 90 days), direct deposit requirements (if any), minimum opening deposit, and when the $300 bonus will be credited.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "CANSPAM_MISSING_ELEMENT",
+        "regulation": "15 U.S.C. 7704",
+        "offending_text": null,
+        "explanation": "Commercial emails must include a valid physical postal address of the sender to comply with CAN-SPAM Act requirements.",
+        "suggested_fix": "Add First County Bank's full physical postal address (street address or P.O. Box) in the email footer alongside the unsubscribe link.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": true,
+      "channel_type": "email",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "Regulation DD",
+        "FDIC Subpart A",
+        "CAN-SPAM",
+        "UDAAP"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "cc9012c7ce53f0e3a58f0dbd"
+  },
+  {
+    "ad_id": "AD-10",
+    "findings": [
+      {
+        "issue_code": "FCRA_PRESCREEN_NOTICE",
+        "regulation": "15 U.S.C. 1681m(d); 12 CFR 1022.54",
+        "offending_text": null,
+        "explanation": "Written prescreened offers of credit ('PRE-APPROVED') must include both the required short-form opt-out notice on the first page and the long-form opt-out notice detailing how consumers can opt out of prescreened solicitations via 1-888-5-OPT-OUT or www.optoutprescreen.com.",
+        "suggested_fix": "Add the required FCRA short-form opt-out notice (e.g., 'PRESCREEN & OPT-OUT NOTICE: This \"prescreened\" offer of credit is based on information in your credit report...') and the corresponding long-form notice with opt-out contact information.",
+        "severity": "high",
+        "confidence": 0.98,
+        "needs_human_review": false,
+        "validation_notes": []
+      },
+      {
+        "issue_code": "REGZ_INTRO_RATE",
+        "regulation": "12 CFR 1026.16(d)(6), 1026.16(g)",
+        "offending_text": "Enjoy 0% APR on purchases and balance transfers!",
+        "explanation": "Under Regulation Z (12 CFR 1026.16(g)), advertising a promotional or introductory rate on open-end credit requires using the word 'introductory' or 'intro' in immediate proximity to the rate, stating the duration of the rate, and disclosing the post-promotional APR that will apply.",
+        "suggested_fix": "Revise to: 'Enjoy an intro 0% APR on purchases and balance transfers for 12 months. After that, a variable APR of 18.99% - 24.99% will apply based on creditworthiness.'",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "open_end_credit",
+      "consumer": true,
+      "channel_type": "mailer",
+      "prescreened_offer": true,
+      "applicable_rules": [
+        "12 CFR 1026.16 (Regulation Z)",
+        "15 U.S.C. 1681m(d) / 12 CFR 1022.54 (FCRA)",
+        "12 U.S.C. 5531, 5536 (UDAAP)"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "bea97941379e3a77d959e584"
+  },
+  {
+    "ad_id": "AD-11",
+    "findings": [
+      {
+        "issue_code": "REGDD_MISSING_APY_TERMS",
+        "regulation": "12 CFR 1030.8(c)",
+        "offending_text": null,
+        "explanation": "When advertising an APY for a time account (CD), Regulation DD (12 CFR 1030.8(c)(6)) requires disclosing that a penalty will or may be imposed for early withdrawal.",
+        "suggested_fix": "Include 'A penalty will or may be imposed for early withdrawal' in the fine print disclosures.",
+        "severity": "high",
+        "confidence": 0.95,
+        "needs_human_review": false,
+        "validation_notes": []
+      }
+    ],
+    "classification": {
+      "product_category": "deposit",
+      "consumer": true,
+      "channel_type": "print",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "Reg DD",
+        "FDIC Part 328",
+        "UDAAP"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "0af1c75a31ea006ecfd14578"
+  },
+  {
+    "ad_id": "AD-12",
+    "findings": [],
+    "classification": {
+      "product_category": "closed_end_credit",
+      "consumer": true,
+      "channel_type": "email",
+      "prescreened_offer": false,
+      "applicable_rules": [
+        "12 CFR 1026.24",
+        "15 U.S.C. 7704",
+        "12 U.S.C. 5531"
+      ]
+    },
+    "dropped": [],
+    "model": "replay:gemini-3.6-flash",
+    "provider": "replay",
+    "prompt_version": "v1",
+    "taxonomy_version": "1.0",
+    "latency_ms": 0,
+    "cache_key": "0c987279450f601532d017dc"
+  }
+]
